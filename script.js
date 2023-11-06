@@ -1,10 +1,4 @@
-//GLOBAL VARIABLES
-
-const form = document.querySelector('form');
-const tbody = document.querySelector('tbody');
-const emailInput = document.querySelector('#exampleInputEmail1');
-const usernameInput = document.querySelector('#exampleInputUsername1');
-const passwordInput = document.querySelector('#exampleInputPassword1');
+// CLASSES
 
 class User {
     constructor(email, username, password) {
@@ -13,6 +7,15 @@ class User {
         this.password = password;
     }
 }
+
+
+//GLOBAL VARIABLES
+
+const form = document.querySelector('form');
+const tbody = document.querySelector('tbody');
+const emailInput = document.querySelector('#exampleInputEmail1');
+const usernameInput = document.querySelector('#exampleInputUsername1');
+const passwordInput = document.querySelector('#exampleInputPassword1');
 
 const data = [
     new User('pera@gmail.com', 'pera', 'pera123'),
@@ -88,7 +91,7 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
-    let passwordToInsert = passwordInput.value;
+    let passwordToInsert = passwordInput.value; 
 
     data.push(new User(emailInput.value.trim(),
         usernameInput.value,
